@@ -62,7 +62,7 @@ Coming soon...
 
 ## Author
 
-Bhargav Sudhir Shivaram
+Sudhir Shivaram
 
 ## License
 
