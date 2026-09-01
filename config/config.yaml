@@ -1,0 +1,30 @@
+# Minimal Configuration for LangChain RAG System
+
+# Data paths
+paths:
+  raw_data: "data/raw/NC/2026/formulary"
+  processed_data: "data/processed/NC/2026/formulary"
+  state: "NC"
+  year: "2026"
+  document_type: "formulary"
+
+# Text chunking settings
+chunking:
+  chunk_size: 500
+  chunk_overlap: 50
+
+# Embedding model
+embedding:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  dimension: 384
+
+# Retrieval settings
+retrieval:
+  top_k: 3
+
+# LLM settings
+llm:
+  model: "llama3.1"              # local Ollama — notebooks/dev only
+  gemini_model: "gemini-2.5-flash"  # used by the deployed Gradio app (app.py)
+  temperature: 0.3
+  max_tokens: 1000

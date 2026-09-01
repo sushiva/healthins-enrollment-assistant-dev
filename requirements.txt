@@ -2,9 +2,13 @@
 langchain
 langchain-community
 langchain-google-genai
+langchain-huggingface
+langchain-text-splitters
+
 
 # Vector Store
 faiss-cpu
+rank_bm25
 
 # Embeddings
 sentence-transformers
@@ -22,3 +26,6 @@ gradio
 # Utils
 python-dotenv
 pyyaml
+
+# Jupyter Notebook
+ipykernel

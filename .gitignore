@@ -30,9 +30,10 @@ env/
 .env
 .env.local
 
-# Data files
-data/raw/*.pdf
-data/processed/
+# Data files — track eval_set_200.json (required by the cert rubric) and the
+# FAISS cache (app.py loads it at startup, doesn't rebuild it). The LlamaIndex
+# cache is notebook-03-only, unused by the deployed app — skip it, it's 23MB.
+**/llamaindex_cache_*/
 
 # Logs
 logs/
@@ -51,7 +52,6 @@ Thumbs.db
 
 # Jupyter
 .ipynb_checkpoints/
-*.ipynb
 
 # Test
 .pytest_cache/
@@ -60,3 +60,6 @@ htmlcov/
 
 # UV
 .python-version
+
+# Code review notes (working docs, not part of the shipped project)
+codereview/
